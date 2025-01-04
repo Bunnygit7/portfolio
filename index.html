@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+
+            font-family: 'ubuntu';
+        }
+
+        header {
+            background-color: rgb(0, 0, 0);
+            padding: 1%;
+
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            color: rgb(0, 0, 0);
+            gap: 25px;
+            font-size: 20px;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: rgb(198, 32, 32);
+        }
+
+        nav ul li a:hover {
+            color: rgb(246, 96, 96);
+            text-decoration: underline;
+        }
+
+        .l-name {
+            display: none;
+
+        }
+
+        .logo {
+            letter-spacing: 2px;
+            font-size: 50px;
+        }
+
+        .logo:hover .l-name {
+            display: inline;
+
+        }
+
+        .logo {
+            text-decoration: none;
+            color: rgb(198, 32, 32);
+        }
+
+        footer {
+            background-color: rgb(221, 231, 231);
+            /* position: fixed; */
+            left: 0;
+            bottom: 0;
+            width: auto;
+            padding: 1%;
+            
+
+        }
+
+        .f-links {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            gap: 40px;
+        }
+
+
+        .links {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .links a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+            color: blue;
+
+        }
+
+        .cpr {
+            display: flex;
+            justify-content: center;
+        }
+
+        .edu {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 5%;
+        }
+
+        .edu-desc {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .education {
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        .edu-cap,
+        .resume-cap {
+            display: flex;
+            ;
+            justify-content: center;
+            color: red;
+        }
+
+        .edu-desc h2 {
+            color: red;
+        }
+
+        .edu img {
+            border-radius: 20px;
+        }
+
+        .form-req {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+        .res-btn {
+            --b: 3px;
+            /* border thickness */
+            --s: .45em;
+            /* size of the corner */
+            --color: #373B44;
+
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+                conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+
+            border: 0;
+
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+        .res-btn:hover,
+        .res-btn:focus-visible {
+            --_p: 0px;
+            outline-color: var(--color);
+            outline-offset: .05em;
+            cursor: pointer;
+        }
+
+        .res-btn:active {
+            background: var(--color);
+            color: #fff;
+        }
+        .resume{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            B<span class="l-name">ATTULA </span>S<span class="l-name">HIVA </span>P<span class="l-name">RASAD </span>
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="BSP CV.pdf">Resume</a></li>
+                <li><a href="">My Tube</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="main">
+
+
+        <hr>
+
+        <div class="education">
+
+            <h1 class="edu-cap">Education</h1>
+
+            <div class="edu">
+                <div class="edu-desc">
+                    <h2>Bachelor of Science in Mathematics, Electronics, & Computer Science</h2>
+                    <h3>Little Flower Degree College, Uppal, Hyderabad, Telangana; 2021-2024</h3>
+                    <h4>CGPA:9.05</h4>
+                </div>
+
+                <img src="lfdc.png" alt="lfdc" height="200">
+            </div>
+
+            <div class="edu">
+
+                <img src="narayana jr clg.avif" alt="lfdc" height="200">
+                <div class="edu-desc">
+                    <h2>Higher Secondary Education</h2>
+                    <h3>Narayana Junior College, Hayatnagar, Hyderabad, Telangana; 2019-2021</h3>
+                    <h4>Percertage:93.6%</h4>
+                </div>
+
+
+            </div>
+
+            <div class="edu">
+                <div class="edu-desc">
+                    <h2>Secondary Education</h2>
+                    <h3>Zilla Parishad High School, Bheemgal, Nizamabad, Telangana; 2019</h3>
+                    <h4>CGPA:9.5</h4>
+                </div>
+
+                <img src="lfdc.png" alt="lfdc" height="200">
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="resume">
+
+            <h1 class="resume-cap">Resume</h1>
+
+            <a href="BSP CV.pdf"><button class="res-btn" role="button">Check out my Resume ></button></a>
+
+
+        </div>
+
+
+        <hr>
+
+        <form action="" method="post" class="form-req">
+            Name :<input type="text" name="" id="">
+            Ph.no:<input type="number" name="" id="">
+            E-mail:<input type="mail" name="" id="">
+            Description:<Textarea></Textarea>
+            <input type="submit" value="submit">
+        </form>
+
+
+
+    </div>
+
+
+    <footer>
+        <div class="f-links">
+            <div class="links">
+                <a href="tel:+917396450954"><i class="fa fa-phone"></i> Phone</a>
+                <a href="https://wa.me/917396450954"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:battulashivaprasad7@gmail.com"><i class="fa fa-envelope"></i> Mail</a>
+            </div>
+
+            <div class="links">
+                <a href="https://www.linkedin.com/in/shiva-prasad-battula-3a94ab256/"><i
+                        class="fa fa-linkedin-square"></i> LinkedIn</a>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                <a href="https://github.com/Bunnygit7"><i class="fa fa-github"></i> GitHub</a>
+            </div>
+
+            <div class="links">
+                <a href=""><i class="fa fa-youtube-play"></i> YouTube</a>
+                <a href="#"><i class="fa fa-telegram"></i> Telegram</a>
+                <a href=""><i class="fa fa-twitter"></i> Twitter</a>
+            </div>
+        </div>
+
+        <div class="cpr"> @Copyright 2025</div>
+    </footer>
+
+</body>
+
+</html>
