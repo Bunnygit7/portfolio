@@ -18,11 +18,15 @@
         * {
             margin: 0%;
             padding: 0%;
+            outline: none;
+            box-sizing: border-box;
+            
         }
 
         body {
 
             font-family: 'ubuntu';
+            
         }
 
         header {
@@ -45,10 +49,11 @@
 
         nav ul a {
             text-decoration: none;
-            color: rgb(198, 32, 32);
+            /* color: rgb(198, 32, 32); */
+            color: red;
         }
 
-        nav ul li a:hover {
+        nav ul li a:hover,a.active {
             color: rgb(246, 96, 96);
             text-decoration: underline;
         }
@@ -70,11 +75,12 @@
 
         .logo {
             text-decoration: none;
-            color: rgb(198, 32, 32);
+            /* color: rgb(198, 32, 32); */
+            color: red;
         }
 
         footer {
-            background-color: rgb(221, 231, 231);
+            background-color: #ef5f5f;
             /* position: fixed; */
             left: 0;
             bottom: 0;
@@ -155,7 +161,53 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            padding: 2%;
+            gap: 10px;
+            background:linear-gradient(#ffffff,#f17777);
+            
 
+        }
+        .form-req .form-feild{
+            width: 400px;
+            height: 50px;
+            border-radius: 30px;
+            outline: none;
+            border: 0;
+            padding-left: 10px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .form-req .form-feild:hover{
+            background-color: #f7f0f0;
+        }
+        .form-req .form-text-feild{
+            width: 400px;
+            height: 150px;
+            font-size: 18px;
+            border-radius: 25px;
+            outline: none;
+            border: 0;
+            padding-left: 10px;
+            padding-top: 10px;
+            font-weight: 600;
+        }
+        .form-req .form-text-feild:hover{
+            background-color: #f7f0f0;
+        }
+        .sbt-btn{
+            width: 200px;
+            height: 50px;
+            border-radius: 30px;
+            outline: none;
+            border: 0;
+            /* background-color: rgb(232, 34, 34); */
+            background-color: rgb(255, 255, 255);
+            font-size: 25px;
+            
+        }
+        .sbt-btn:hover{
+            background-color: rgb(234, 51, 51);
+            font-size: 30px;
         }
         .res-btn {
             --b: 3px;
@@ -198,12 +250,268 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
+            padding: 2%;
+        }
+        .intro
+        {
+            display: flex;
+            /* flex-direction: row; */
+            /* justify-content: space-between; */
+            /* justify-content: space-around; */
+            justify-content: space-evenly;
+        }
+        .left-block{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* align-items: center; */
+            
+
+        }
+        .left-block h1{
+            color: red;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid black;
+            animation: typewriter 2.5s steps(25,end) forwards, blink 800ms steps(20) infinite;
         }
         
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 55%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+
+        /* @media screen and (max-width:768px){
+            .intro
+        {
+            display: flex;
+            flex-direction: column-reverse;
+            
+            justify-content: space-evenly;
+        }
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 58%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+        }
+
+        @media screen and (max-width:600px){
+            .intro
+        {
+            display: flex;
+            flex-direction: column-reverse;
+            
+            justify-content: space-evenly;
+        }
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 58%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+        }
+        
+
+        @media screen and (min-width:600px){
+            .intro
+        {
+            display: flex;
+            flex-direction: column-reverse;
+            
+            justify-content: space-evenly;
+        }
+        @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 58%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+        } */
+
+
+        /* Desktops and laptops ----------- */
+@media only screen and (max-width : 1824px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (max-width : 1224px) {
+    
+}
+
+/* iPads (portrait) ----------- */
+/* @media only screen and (max-width : 1024px) {...} */
+
+/* Smartphones (landscape) ----------- */
+/* @media only screen and (max-width : 768px) {...} */
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+/* @media only screen and (max-width : 640px) {...} */
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width : 321px) {
+    .intro{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            
+         }
+         @media (max-width:768px){
+            .intro{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 58%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+
+}
+
+
+
+         @media (max-width:768px){
+            .intro{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            
+         }
+         @media (max-width:768px){
+            .intro{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 58%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+        
+            
+         }
+         @media (max-width:640px){
+            .intro{
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            @keyframes typewriter {
+            from {
+                width: 0%;
+            }
+            to {
+                width: 75%;
+            }
+        }
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+            to {
+                border-color: transparent;
+            }
+        }
+        }
+        .skills{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2%;
+        }
+        .skl{
+            display: flex;
+            flex-direction: row;
+        }
+        .skills-list{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 55%;
+            justify-content: space-between;
+            gap: 70px;
+            
+        }
+        .skills-list h2{
+            display: flex;
+            align-items: center;
+            
+        }
     </style>
 </head>
 
 <body>
+    <!-- <audio autoplay controls>
+        <source src="typing-keyboard-sound-254462.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio> -->
 
     <header>
         <a href="index.html" class="logo">
@@ -212,7 +520,7 @@
 
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="">Projects</a></li>
                 <li><a href="">Blog</a></li>
                 <li><a href="BSP CV.pdf">Resume</a></li>
@@ -224,7 +532,53 @@
 
     <div class="main">
 
+        
+          
+        <div class="intro">
+            <div class="left-block">
+                
+                <!-- <audio id="player" autoplay controls >
+                    <source src="typing-keyboard-sound-254462.mp3" type="audio/mp3">
+                </audio> -->
+                <h1>Hi, I'm Shiva Prasad Battula!</h1>
+                <h2>Aspiring Java Full Stack Developer | Problem Solver | Tech Enthusiast</h2>
+            </div>
 
+            <div class="right-block">
+                <img src="WhatsApp Image 2025-01-06 at 23.46.58_19d552d8.jpg" alt="" height="600" >
+
+            </div>
+
+            
+
+        </div>
+        <!-- <div class="desc">
+            <p>Aspiring software engineer with hands-on experience in developing web and desktop applications using Java, PHP, and
+            JavaScript. Strong foundation in database management and backend development, with a proven ability to design and
+            implement user-centric solutions. Seeking to leverage my technical expertise and problem-solving skills in a dynamic
+            organization, while continuing to grow in software engineering and contribute to innovative projects.</p>
+        </div>  -->
+        <br>
+        <hr>
+        <div class="skills">
+
+            <h1>Skills</h1>
+            <div class="skills-list">
+                <div class="skl"><img src="Java-Logo.png" alt="" height="80"><h2>Java</h2></div>
+                <div class="skl"><img src="HTML-logo.png" alt="" height="60"><h2>HTML</h2></div>
+                <div class="skl"><img src="CSS-Cascading-Style-Sheets-Logo-New.png" alt="" height="60"><h2>CSS</h2></div>
+                <div class="skl"><img src="JavaScript-Logo.png" alt="" height="60"><h2>JS</h2></div>
+                <div class="skl"><img src="MySQL-Logo.png" alt="" height="60"><h2></h2></div>
+                <div class="skl"><img src="ORCL-logo.png" alt="" height="60" width="80"><h2>Oracle</h2></div>
+                <div class="skl"><img src="Java-Logo.png" alt="" height="80"><h2>Java</h2></div>
+                <div class="skl"><img src="HTML-logo.png" alt="" height="60"><h2>HTML</h2></div>
+                <div class="skl"><img src="CSS-Cascading-Style-Sheets-Logo-New.png" alt="" height="60"><h2>CSS</h2></div>
+                <div class="skl"><img src="JavaScript-Logo.png" alt="" height="60"><h2>JS</h2></div>
+                <div class="skl"><img src="MySQL-Logo.png" alt="" height="60"><h2></h2></div>
+                <div class="skl"><img src="ORCL-logo.png" alt="" height="60" width="80"><h2>Oracle</h2></div>
+               
+            </div>
+        </div>
         <hr>
 
         <div class="education">
@@ -278,21 +632,22 @@
 
 
         <hr>
-
-        <form action="" method="post" class="form-req">
-            Name :<input type="text" name="" id="">
-            Ph.no:<input type="number" name="" id="">
-            E-mail:<input type="mail" name="" id="">
-            Description:<Textarea></Textarea>
-            <input type="submit" value="submit">
+        <h1 style="justify-content: center;display: flex;">Do you want to Message me?</h1>
+        <form autocomplete="off" action="" method="post" class="form-req">
+            <input class="form-feild" type="text" name="name" id="" placeholder="Enter your Name">
+            <input class="form-feild" type="number" name="pno" id="" placeholder="Enter your Ph.no">
+            <input class="form-feild" type="mail" name="email" id="" placeholder="Enter your mail id">
+            <Textarea class="form-text-feild" name="msg" placeholder="Enter Message"></Textarea>
+            <button class="sbt-btn" type="submit">Send <i class="fa fa-send-o"></i></button>
         </form>
 
 
 
     </div>
-
+<hr>
 
     <footer>
+        <h2 style="display: flex; justify-content: center; ">Let's Connect!</h2><br>
         <div class="f-links">
             <div class="links">
                 <a href="tel:+917396450954"><i class="fa fa-phone"></i> Phone</a>
@@ -314,7 +669,7 @@
             </div>
         </div>
 
-        <div class="cpr"> @Copyright 2025</div>
+        <div class="cpr"> © 2025 Shiva Prasad Battula.</div>
     </footer>
 
 </body>
